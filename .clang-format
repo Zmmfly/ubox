@@ -1,0 +1,8 @@
+---
+Language              : Cpp
+BasedOnStyle          : Microsoft
+IndentWidth           : 4
+AlignAfterOpenBracket : BlockIndent
+AlignArrayOfStructures: Right
+...
+
