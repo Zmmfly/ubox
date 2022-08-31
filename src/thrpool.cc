@@ -41,7 +41,11 @@ bool thrpool::start(size_t num)
                     task = std::move(m_tasks.front());
                     m_tasks.pop();
                 }
-                task();
+                try {
+                    if (task) task();
+                } catch (std::exception &e) {
+                    spdlog::error("zmmfly::thrpool execute exception: {}", e.what());
+                }
                 {
                     std::unique_lock<std::mutex> lock(m_tasks_mtx);
                     std::get<1>(m_workers[i]) = true;
