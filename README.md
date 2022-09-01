@@ -1,2 +1,2 @@
-# MPD
-C++ **M**essage and **P**ipeline **D**istribution.
+# ubox
+Zmmfly's universal C++ box
